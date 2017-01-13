@@ -1,0 +1,25 @@
+@blueDark: #283645;
+@pink: #d22856;
+@pink-30: fade(@pink, 30%);
+@white: #fff;
+@white-30: fade(@white, 30%);
+@green: #2aab6d;
+@greenDark: #1c9b5e;
+@grey: #e5e5e5;
+@blueLight: #b5b9be;
+@blueLight-30: fade(@blueLight, 30%);
+@brownLight: #f2f2f2;
+
+// WIDTH
+@tablet: 700px;
+@desktop: 1020px;
+@mobile-only: 699px;
+
+
+@tablet-widths: ~"(min-width: @{tablet})";
+@desktop-widths: ~"(min-width: @{desktop})";
+@mobile-width-only: ~"(max-width: @{mobile-only})";
+@retina: ~"(min-resolution: 144dpi), (min-resolution: 1.5dppx)";
+
+@primaryColor: @blueDark;
+@secondaryColor: @pink;
