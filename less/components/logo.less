@@ -1,3 +1,52 @@
+.logo.logo--header {
+  display: block;
+  width: 75px;
+  height: 23px;
+  @media @tablet-widths {
+    width: 146px;
+    height: 40px;
+  }
+}
+
+.logo__icon {
+  color: @white;
+
+  &--tablet {
+    display: none;
+  }
+  &--desktop {
+    display: none;
+  }
+
+  @media @tablet-widths {
+    &--mobile {
+      @media @tablet-widths {
+        display: none;
+      }
+    }
+    &--tablet {
+      display: block;
+    }
+  }
+
+  @media @desktop-widths {
+    &--tablet {
+      display: none;
+    }
+    &--desktop {
+      display: block;
+    }
+  }
+
+  &:hover {
+    color: @secondaryColor;
+  }
+  &:active {
+    color: white;
+    opacity: .3;
+  }
+}
+
 .logo__img {
   @media @tablet-widths {
     width: 146px;
