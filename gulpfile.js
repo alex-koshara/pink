@@ -8,7 +8,7 @@ var sourcemaps = require('gulp-sourcemaps');
 
 
 gulp.task('less', function () {
-  return gulp.src('./less/**/*.less')
+  return gulp.src('./less/style.less')
     .pipe(sourcemaps.init())
     .pipe(less({
       paths: [ path.join(__dirname, 'less', 'includes') ]
@@ -16,15 +16,6 @@ gulp.task('less', function () {
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./css'))
     .pipe(server.stream());
-});
-
-gulp.task('copy', function() {
-  return gulp.src([
-    'node_modules/picturefill/dist/picturefill.min.js'
-    ], {
-      base: 'node_modules/picturefill/dist'
-    })
-  .pipe(gulp.dest('js/'));
 });
 
 gulp.task('symbols', function() {
