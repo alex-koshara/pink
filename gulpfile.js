@@ -36,7 +36,6 @@ gulp.task('copy', function() {
   .pipe(gulp.dest('js/vendor'));
 });
 
-
 gulp.task('svgmin', function() {
   return gulp.src('./img/icons/*.svg')
     .pipe(svgmin());
