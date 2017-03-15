@@ -1,0 +1,20 @@
+.page-footer {
+  padding-bottom: 30px;
+}
+
+.page-footer .wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  @media @tablet-widths {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
+.page-footer__item {
+  @media @tablet-widths {
+    width: 33%;
+  }
+}

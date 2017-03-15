@@ -1,0 +1,40 @@
+.social {
+  display: flex;
+
+  margin-bottom: 38px;
+  @media @tablet-widths {
+    padding: 3px 10px 0;
+    margin-bottom: 0;
+    justify-content: center;
+  }
+}
+
+.social__link {
+  display: flex;
+
+  width: 50px;
+  height: 50px;
+  margin: 0 6px;
+
+  text-decoration: none;
+
+  color: @pink;
+  border: 2px solid @brownLight;
+  border-radius: 50%;
+  transition: border-color .2s;
+  &:hover,
+  &:focus {
+    border-color: @primaryColor;
+  }
+  &:active {
+    opacity: .1;
+  }
+}
+
+.icon.icon--social {
+  margin: auto;
+}
+
+.icon.icon--youtube {
+  margin-left: 17px;
+}
