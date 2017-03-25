@@ -2,6 +2,7 @@
   min-height: 235px;
   background-repeat: no-repeat;
   background-position: center top;
+  background-color: @blue;
   background-image: url('../../img/background/bg-back-mobile@1x.jpg');
   @media @retina {
     background-image: url('../../img/background/bg-back-mobile@2x.jpg');
@@ -23,6 +24,49 @@
       background-size: 215%;
     }
   }
+
+  &.page-header--second-bg {
+    min-height: 460px;
+    background-image:
+      url('../../img/background/iphone-hand-mobile@1x.png'),
+      url('../../img/background/bg-back-mobile@1x.jpg');
+    background-position: calc(~"50% - 32px") 176px, center top;
+    @media @retina {
+      background-image:
+        url('../../img/background/iphone-hand-mobile@2x.png'),
+        url('../../img/background/bg-back-mobile@2x.jpg');
+      background-size: 258px 286px, 220% 460px;
+      background-position: calc(~"50% - 32px") 174px, center top;
+    }
+    @media @tablet-widths {
+      min-height: 727px;
+      background-image:
+        url('../../img/background/iphone-hand-tablet@1x.png'),
+        url('../../img/background/bg-back-tablet@1x.jpg');
+      background-position: 50% bottom, center top;
+      background-size: auto, cover;
+      @media @retina-tablet {
+        background-image:
+          url('../../img/background/iphone-hand-tablet@2x.png'),
+          url('../../img/background/bg-back-tablet@2x.jpg');
+        background-size: 700px 545px, cover;
+      }
+    }
+    @media @desktop-widths {
+      min-height: 854px;
+      background-position: calc(~"50% + 70px") bottom, center top;
+
+      background-image:
+        url('../../img/background/iphone-hand-desktop@1x.png'),
+        url('../../img/background/bg-back-desktop@1x.jpg');
+      @media @retina-desktop {
+        background-image:
+          url('../../img/background/iphone-hand-desktop@2x.png'),
+          url('../../img/background/bg-back-desktop@2x.jpg');
+        background-size: 1050px 645px, cover;
+      }
+    }
+  }
 }
 
 .header__top {
@@ -35,6 +79,19 @@
   @media @tablet-widths {
     padding-top: 77px;
     padding-bottom: 65px;
+  }
+  @media @desktop-widths {
+    padding-bottom: 20px;
+  }
+}
+
+.page-header--second-bg .header__bottom {
+  padding-top: 392px;
+  @media @tablet-widths {
+    padding-top: 95px;
+  }
+  @media @desktop-widths {
+    padding-top: 110px;
   }
 }
 
