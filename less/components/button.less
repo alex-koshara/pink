@@ -1,0 +1,49 @@
+.btn {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 30px;
+
+  display: block;
+
+  padding: 17px;
+
+  cursor: pointer;
+  transition-duration: .2s;
+  transition-property: border-color, color, background-color;
+  transition-timing-function: linear;
+  text-align: center;
+  text-decoration: none;
+
+  color: @white;
+  border: none;
+  outline: none;
+  background: @blue;
+  box-shadow: none;
+  @media @tablet-widths {
+    max-width: 300px;
+  }
+  @media @desktop-widths {
+    font-size: 21px;
+  }
+  &.btn--round {
+    line-height: 18px;
+
+    padding: 16px;
+
+    text-transform: none;
+
+    border: 2px solid @white;
+    border-radius: 50px;
+  }
+  &.btn--white {
+    color: @white;
+    background: none;
+    &:hover {
+      background: @white;
+      color: @pink;
+    }
+    &:active {
+      color: @pink-30;
+    }
+  }
+}
