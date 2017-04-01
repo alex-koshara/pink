@@ -5,6 +5,15 @@ var server = require('browser-sync').create();
 var svgmin = require('gulp-svgmin');
 var svgstore = require('gulp-svgstore');
 var sourcemaps = require('gulp-sourcemaps');
+var pug = require('gulp-pug');
+
+gulp.task('template', function buildHTML() {
+  return gulp.src('templates/*.pug')
+  .pipe(pug({
+    locals: '.'
+  }))
+  .pipe(gulp.dest('.'))
+});
 
 
 gulp.task('less', function () {
@@ -41,7 +50,7 @@ gulp.task('svgmin', function() {
     .pipe(svgmin());
 });
 
-gulp.task('serve', ['less', 'copy', 'symbols'], function() {
+gulp.task('serve', ['template', 'less', 'copy', 'symbols'], function() {
   server.init({
     server: '.',
     notify: false,
@@ -51,5 +60,6 @@ gulp.task('serve', ['less', 'copy', 'symbols'], function() {
 
   gulp.watch('less/**/*.less', ['less']);
   gulp.watch('img/icons/*.svg', ['symbols']).on('change', server.reload);
+  gulp.watch('templates/*.pug', ['template']);
   gulp.watch('*.html').on('change', server.reload);
 });
