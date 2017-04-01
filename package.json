@@ -10,6 +10,7 @@
     "gulp-sourcemaps": "^2.4.0",
     "gulp-svgmin": "^1.2.3",
     "gulp-svgstore": "^6.1.0",
+    "normalize.css": "5.0.0",
     "normalize.less": "^1.0.0",
     "picturefill": "^3.0.2",
     "svg4everybody": "^2.1.4"
