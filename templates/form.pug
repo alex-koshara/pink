@@ -40,6 +40,44 @@ html(lang='ru')
             | Конкурс на самое безбашенное путешествие с Пинк
 
     main.main
+      .container
+
+        .form__group
+          label.input
+            span.input__label
+              | Фамилия:
+            .input__wrap
+              input.input__control(type="text" placeholder="Укажите фамилию")
+
+          label.input
+            span.input__label
+              | Имя:
+            .input__wrap
+              input.input__control(type="text" placeholder="Введите ваше имя")
+
+          label.input
+            span.input__label
+              | Отчество:
+            .input__wrap
+              input.input__control(type="text" placeholder="Ну и отчество тоже")
+
+        .form__group
+          label.input.input--icon.input--down
+            span.input__label
+              | Номер телефона
+            .input__wrap
+              input.input__control(type="tel" placeholder="Номер, пожалуйста")
+              svg.icon.input__icon(width='20', height='20')
+                use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='img/icons.svg#icon-phone')
+
+          label.input.input--icon
+            span.input__label
+              | Адрес почты
+            .input__wrap
+              input.input__control(type="email" placeholder="Введите почту")
+              svg.icon.input__icon(width='18', height='14')
+                use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='img/icons.svg#icon-mail')
+
 
     footer.page-footer
       .page-footer__wrapper.container
